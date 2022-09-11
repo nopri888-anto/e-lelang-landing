@@ -56,6 +56,7 @@ Route::group(['middleware' => ['is_role:1']], function () {
 
     Route::get('/lelang',[App\Http\Controllers\Backend\LelangController::class, 'index'])->name('backend.admin.lelang');
     Route::get('/addlelang',[App\Http\Controllers\Backend\LelangController::class, 'tambahlelang'])->name('backend.add.lelang');
+    Route::post('/storelelang',[App\Http\Controllers\Backend\LelangController::class, 'simpanlelang'])->name('backend.store.lelang');
 });
 Route::group(['middleware' => ['is_role:2']], function () {
     Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'user'])->name('backend.user');

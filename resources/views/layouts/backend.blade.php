@@ -20,6 +20,9 @@
   <link rel="stylesheet" type="text/css" href="{{asset('backend')}}/assets/extra-libs/multicheck/multicheck.css" />
   <link href="{{asset('backend')}}/assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.css" rel="stylesheet" />
   <link href="{{asset('backend')}}/dist/css/style.min.css" rel="stylesheet" />
+  <link rel="stylesheet"type="text/css"href="{{asset('backend')}}/assets/libs/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css"/>
+  <link rel="stylesheet" type="text/css" href="{{asset('backend')}}/assets/libs/quill/dist/quill.snow.css"/>
+  <link rel="stylesheet" type="text/css" href="{{asset('backend')}}/assets/libs/select2/dist/css/select2.min.css"/>
 </head>
 
 <body>
@@ -137,8 +140,21 @@
 <script src="{{asset('backend')}}/assets/libs/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
 <script src="{{asset('backend')}}/dist/js/pages/chart/chart-page-init.js"></script>
 <script src="{{asset('backend')}}/assets/extra-libs/DataTables/datatables.min.js"></script>
-  <script>
+<script src="{{asset('backend')}}/assets/libs/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+<script src="{{asset('backend')}}/assets/libs/quill/dist/quill.min.js"></script>
+<script src="{{asset('backend')}}/assets/libs/select2/dist/js/select2.full.min.js"></script>
+<script src="{{asset('backend')}}/assets/libs/select2/dist/js/select2.min.js"></script>
+ <script>
     $("#zero_config").DataTable();
+    /*datwpicker*/
+    jQuery(".mydatepicker").datepicker();
+      jQuery("#datepicker-autoclose").datepicker({
+        autoclose: true,
+        todayHighlight: true,
+      });
+      var quill = new Quill("#editor", {
+        theme: "snow",
+      });
   </script>
 </body>
 

@@ -35,9 +35,10 @@
                       <thead>
                         <tr>
                           <th>No</th>
-                          <th>Kode Lelang</th>
-                          <th>Name</th>
-                          <th>E-mail</th>
+                          <th>Lelang</th>
+                          <th>Satuan Kerja</th>
+                          <th>Periode</th>
+                          <th>Nilai</th>
                           <th>#</th>
                         </tr>
                       </thead>
@@ -46,13 +47,22 @@
                         <tr>
                           <td>{{$key+1}}</td>
                           <td><a href="#">
-                            {{$value->kodelelang}}
+                            {{$value->kodelelang}}<br>
+                            {{$value->namalelang}}
                             </a>
                           </td>
                           <td>
-                           
+                            {{$value->satuankerja}}
+                            <br>
+                            {{$value->lokasilelang}} , {{$value->kab}}, {{$value->province->namaprovinsi}}
                           </td>
-                          <td></td>
+                          <td>
+                            {{$value->tanggalmulailelang}} s/d {{$value->tanggalselesailelang}}
+                          </td>
+                          <td>
+                            <p>Nilai Pagu :@currency( $value->nilaipagu )</p>
+                            <p>Nilai HPS :  @currency($value->nilaihps)</p>
+                          </td>
                           <td>
                             <a href="#" class="btn btn-sm btn-info">Detail</a>
                           </td>

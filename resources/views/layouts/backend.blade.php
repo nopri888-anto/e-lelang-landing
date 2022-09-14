@@ -101,6 +101,10 @@
               <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{route('backend.admin.lelang')}}" aria-expanded="false"><i
                   class="mdi mdi-border-inside"></i><span class="hide-menu">Lelang</span></a>
             </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{route('backend.admin.bidding')}}"
+                aria-expanded="false"><i class="mdi mdi-pencil"></i><span class="hide-menu">Binding</span></a>
+            </li>
           </ul>
         </nav>
         <!-- End Sidebar navigation -->
